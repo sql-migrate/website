@@ -16,7 +16,7 @@
           id="contactForm"
           novalidate>
 
-          <div class="row control-group">
+          <div class="row control-group input-element">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Name</label>
               <input name="name"
@@ -29,7 +29,7 @@
                 <p class="help-block text-danger"></p>
             </div>
           </div>
-          <div class="row control-group">
+          <div class="row control-group input-element">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Email Address</label>
               <input name="email"
@@ -54,7 +54,7 @@
             <!-- <input name="_next" type="hidden" /> -->
 
           </div>
-          <div class="row control-group">
+          <div class="row control-group input-element">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label>Message</label>
 
@@ -72,14 +72,10 @@
           <br>
           <div class="row text-center">
             <div class="form-group col-xs-12">
-              <!-- show submit button ...  -->
+              <h4 class="contact-success" id="sending" style="display:none">Sending message ...</h4>
+              <h3 class="contact-success" id="sent-success" style="display:none">Contact request sent, thank you! We'll get back to you asap!</h3>
+              <h3 class="contact-error" id="sent-error" style="display:none">Sorry, something went wrong. Please try again a little later!</h3>
               <button type="submit" class="btn btn-success btn-lg" id="send-button">Send</button>
-              <!-- ... or sending message ... -->
-              <p class="contact-success" id="sending" style="display:none">Sending message ...</p>
-              <!-- ... or sent message ... -->
-              <p class="contact-success" id="sent-success" style="display:none">Sent, thank you!</p>
-              <!-- ... or error message -->
-              <p class="contact-error" id="sent-error" style="display:none">Something went wrong, please try again a little later!</p>
             </div>
           </div>
 

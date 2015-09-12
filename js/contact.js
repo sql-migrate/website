@@ -47,10 +47,12 @@ $contactForm.submit(function (e) {
     success: function (data) {
       $('#sending').hide();
       $('#sent-success').show();
+      $('.input-element').hide();
     },
     error: function (err) {
       $('#sending').hide();
       $('#sent-error').show();
+      $('#send-button').show();
     }
   });
 });

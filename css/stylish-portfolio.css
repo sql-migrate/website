@@ -295,6 +295,14 @@ hr.small {
     color: #a94442;
 }
 
+.contact-success {
+    color: #27ae60;
+}
+
+.contact-error {
+    color: #a94442;
+}
+
 /* Map */
 
 .map {
