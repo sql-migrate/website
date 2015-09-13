@@ -12,13 +12,37 @@ $(function() {
     });
 });
 
-//jqBootstrapValidation
+//jqBootstrapValidation + Formspree + Ajax
 $(function() {
   $("input,textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
+      console.log("submitError!")
     },
     submitSuccess: function($form, event) {
+      console.log("submitSuccess!!!")
+      event.preventDefault();
+      $.ajax({
+        url: '//formspree.io/{{ site.email }}',
+        method: 'POST',
+        data: $(this).serialize(),
+        dataType: 'json',
+        beforeSend: function() {
+          $('#send-button').hide();
+          $('#sending').show();
+        },
+        success: function (data) {
+          $('#sending').hide();
+          $('.input-element').fadeOut(1000, function() {
+            $('#sent-success').show();
+          });
+       },
+        error: function (err) {
+          $('#sending').hide();
+          $('#sent-error').show();
+          $('#send-button').show();
+        }
+      });
     },
     filter: function() {
       return $(this).is(":visible");
@@ -28,31 +52,5 @@ $(function() {
   $("a[data-toggle=\"tab\"]").click(function(e) {
     e.preventDefault();
     $(this).tab("show");
-  });
-});
-
-//Formspree
-var $contactForm = $('#contactForm');
-$contactForm.submit(function (e) {
-  e.preventDefault();
-  $.ajax({
-    url: '//formspree.io/{{ site.email }}',
-    method: 'POST',
-    data: $(this).serialize(),
-    dataType: 'json',
-    beforeSend: function() {
-      $('#send-button').hide();
-      $('#sending').show();
-    },
-    success: function (data) {
-      $('#sending').hide();
-      $('#sent-success').show();
-      $('.input-element').hide();
-    },
-    error: function (err) {
-      $('#sending').hide();
-      $('#sent-error').show();
-      $('#send-button').show();
-    }
   });
 });
