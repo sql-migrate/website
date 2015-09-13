@@ -291,8 +291,9 @@ hr.small {
     color: #337ab7;
 }
 
-.text-danger {
-    color: #a94442;
+.validation-error {
+  color: red;
+  font-size: 120%;
 }
 
 .contact-success {

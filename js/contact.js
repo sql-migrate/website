@@ -61,12 +61,16 @@ for ( var i = 0; i < forms.length; i++ ) {
 }
 
 // change the messages for each form field ...
-var email = document.querySelector('input[name="email"]');
+//Bug: custom messages show up only on 'second submit'
+var emailField = document.querySelector('input[name="email"]');
 var nameField = document.querySelector('input[name="name"]');
-var message = document.querySelector('textarea[name="message"]');
+var messageField = document.querySelector('textarea[name="message"]');
 
-// ... by 
-email.oninvalid = function( e ) {
+nameField.oninvalid = function( e ) {
+  e.target.setCustomValidity("Please enter you name");
+}
+
+emailField.oninvalid = function( e ) {
   e.target.setCustomValidity("");
   if (!e.target.validity.valid) {
     if (e.target.value.length == 0) {
@@ -77,8 +81,8 @@ e.target.setCustomValidity("That doesn't look like an Email address");
   }
 };
 
-nameField.oninvalid = function( e ) {
-  e.target.setCustomValidity("Enter your name please");
+messageField.oninvalid = function( e ) {
+  e.target.setCustomValidity("Your message goes here");
 }
 
 // Formspree
