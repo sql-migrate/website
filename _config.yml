@@ -1,6 +1,5 @@
 # Site settings
 title: Stylish Portfolio
-email: theme@viennalabs.com
 description: > # this means to ignore newlines until "baseurl:"
   A Jekyll implementation of the Stylish Portfolio template by Start Bootstrap.
   Stylish Portfolio is a one page Bootstrap portfolio theme with off canvas
@@ -8,8 +7,19 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "127.0.0.1:4001" # the base hostname & protocol for your site
 
+# User setting
+owner: Felix Volny
+email: theme@viennalabs.com
 twitter_username: volnyio
 github_username:  volny
+address:
+  - line: 1 Market St
+  - line: "San Fransisco, CA 94103"
+  # Feel free to add more lines here 
+telephone: (123) 456-7891
+
+# API settings
+google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ
 
 # Build settings
 markdown: kramdown
