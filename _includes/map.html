@@ -1,4 +1,14 @@
-<section id="map" class="map">
+<section id="map" class="map ">
+    <aside class="map-aside bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3>Looking forward to meeting you in person!</h3>
+          </div>
+        </div>
+      </div>
+    </aside>
+
   <iframe id="map_iframe"
     width="100%"
     height="100%"
@@ -6,8 +16,7 @@
     scrolling="no"
     marginheight="0"
     marginwidth="0"
-    src=
-    "https://maps.google.com/maps/embed/v1/place?key=AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ
-     &q=Neubaugasse+Vienna,Austria" allowfullscreen>
+    src="https://maps.google.com/maps/embed/v1/place?key={{ site.google_api_key }}&q={% for address in site.address %}{{ address.line }},{% endfor %}"
+    allowfullscreen>
   </iframe>
 </section>

@@ -2,12 +2,16 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h4><strong>Felix Volny</strong>
+        <h4><strong>{{ site.owner }}</strong>
         </h4>
-        <p>One Market<br>San Fransisco, CA 94103</p>
+        <p>
+        {% for address in site.address %}
+        {{ address.line }}<br>
+        {% endfor %}
+        </p>
         <ul class="list-unstyled">
-          <li><i class="fa fa-phone fa-fw"></i> (123) 333-4892</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:theme@viennalabs.com">theme@viennalabs.com</a>
+          <li><i class="fa fa-phone fa-fw"></i> {{ site.telephone }}</li>
+          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:{{ site.email }}">{{ site.email }}"</a>
           </li>
         </ul>
         <br>
@@ -20,7 +24,7 @@
           </li>
        </ul>
         <hr class="small">
-        <p class="text-muted">Copyright &copy; Your Website 2015</p>
+        <p class="text-muted">Copyright &copy; {{ site.copyright }} 20{{ site.time | date: '%y' }}</p>
       </div>
     </div>
   </div>

@@ -1,15 +1,26 @@
 # Site settings
 title: Stylish Portfolio
-email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A Jekyll implementation of the Stylish Portfolio template by Start Bootstrap.
+  Stylish Portfolio is a one page Bootstrap portfolio theme with off canvas
+  navigation and smooth scrolling through content sections.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 
+# User setting
+owner: Felix Volny
+email: theme@viennalabs.com
 twitter_username: volnyio
 github_username:  volny
+address:
+  - line: 1 Market St
+  - line: "San Fransisco, CA 94103"
+  # Feel free to add more lines here 
+telephone: (123) 456-7891
+copyright: Your Website
+
+# API settings
+google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ
 
 # Build settings
 markdown: kramdown
