@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Stylish Portfolio is a one page Bootstrap portfolio theme with off canvas
   navigation and smooth scrolling through content sections.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "127.0.0.1:4001" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 
 # User setting
 owner: Felix Volny
@@ -17,6 +17,7 @@ address:
   - line: "San Fransisco, CA 94103"
   # Feel free to add more lines here 
 telephone: (123) 456-7891
+copyright: Your Website
 
 # API settings
 google_api_key: AIzaSyA8H0jVz_6Hc273rqNYKQ6AAiBvQfVKmYQ

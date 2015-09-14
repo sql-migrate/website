@@ -309,6 +309,10 @@ hr.small {
     height: 500px;
 }
 
+.map-aside {
+    padding: 40px 0;
+}
+
 @media(max-width:768px) {
     .map {
         height: 75%;
@@ -323,6 +327,6 @@ hr.small {
 /* Footer */
 
 footer {
-    padding-top: 50px;
+    padding-top: 180px;
     padding-bottom: 20px;
 }

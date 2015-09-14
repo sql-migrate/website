@@ -33,7 +33,7 @@ $(function() {
         },
         success: function (data) {
           $('#sending').hide();
-          $('.input-element').fadeOut(1000, function() {
+          $('.input-element').fadeOut(500, function() {
             $('#sent-success').show();
           });
        },
